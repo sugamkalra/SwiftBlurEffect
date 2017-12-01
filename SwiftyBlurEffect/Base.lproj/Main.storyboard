@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftyBlurEffect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IIA-BI-8Ie">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple_Swift_Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="NhO-N4-rSF">
+                                <rect key="frame" x="60" y="28" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="4TP-Pd-4P3"/>
+                                    <constraint firstAttribute="height" constant="256" id="rwG-qQ-cG0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Far-pi-hX4">
+                                <rect key="frame" x="152" y="312" width="72" height="30"/>
+                                <state key="normal" title="Blur Effect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="blurImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q6O-30-7Ch"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71764705880000002" green="0.6588235294" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NhO-N4-rSF" firstAttribute="top" secondItem="x0Q-xM-yff" secondAttribute="top" constant="8" id="4Pi-ZJ-iti"/>
+                            <constraint firstItem="Far-pi-hX4" firstAttribute="top" secondItem="NhO-N4-rSF" secondAttribute="bottom" constant="28" id="8bl-sF-OVB"/>
+                            <constraint firstItem="Far-pi-hX4" firstAttribute="centerX" secondItem="NhO-N4-rSF" secondAttribute="centerX" id="NZ3-4W-iAg"/>
+                            <constraint firstItem="NhO-N4-rSF" firstAttribute="centerX" secondItem="IIA-BI-8Ie" secondAttribute="centerX" id="azi-ya-ASa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x0Q-xM-yff"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="NhO-N4-rSF" id="qkT-ZM-iqm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Apple_Swift_Logo.png" width="256" height="256"/>
+    </resources>
+</document>
